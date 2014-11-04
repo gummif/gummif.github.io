@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:gadfly="http://www.gadflyjl.org/ns"
+     version="1.2"
+     width="160mm" height="100mm" viewBox="0 0 160 100"
+     stroke="none"
+     fill="#000000"
+     stroke-width="0.3"
+     font-size="3.88"
+>
+<g class="plotroot xscalable yscalable" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-1">
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="none" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-2">
+    <text x="80.04" y="92" text-anchor="middle">Array length [n]</text>
+  </g>
+  <g class="guide xlabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-3">
+    <text x="22.74" y="86.39" text-anchor="middle">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83.333333%">0</tspan></text>
+    <text x="51.39" y="86.39" text-anchor="middle">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83.333333%">2</tspan></text>
+    <text x="80.04" y="86.39" text-anchor="middle">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83.333333%">4</tspan></text>
+    <text x="108.68" y="86.39" text-anchor="middle">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83.333333%">6</tspan></text>
+    <text x="137.33" y="86.39" text-anchor="middle">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83.333333%">8</tspan></text>
+  </g>
+  <g class="guide colorkey" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-4">
+    <g fill="#4C404B" font-size="2.82" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-5">
+      <text x="143.14" y="43.37" dy="0.35em" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-6" class="color_FAO">FAO</text>
+      <text x="143.14" y="47" dy="0.35em" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-7" class="color_BLAS">BLAS</text>
+      <text x="143.14" y="50.62" dy="0.35em" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-8" class="color_Forloop">Forloop</text>
+      <text x="143.14" y="54.25" dy="0.35em" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-9" class="color_Broadcast">Broadcast</text>
+    </g>
+    <g stroke="none" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-10">
+      <rect x="140.33" y="42.46" width="1.81" height="1.81" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-11" fill="#00BFFF" class="color_FAO"/>
+      <rect x="140.33" y="46.09" width="1.81" height="1.81" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-12" fill="#D4CA3A" class="color_BLAS"/>
+      <rect x="140.33" y="49.72" width="1.81" height="1.81" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-13" fill="#FF5EA0" class="color_Forloop"/>
+      <rect x="140.33" y="53.34" width="1.81" height="1.81" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-14" fill="#00E5B2" class="color_Broadcast"/>
+    </g>
+    <g fill="#362A35" font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" stroke="none" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-15">
+      <text x="140.33" y="39.55" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-16">method</text>
+    </g>
+  </g>
+  <g clip-path="url(#fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-18)" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-17">
+    <g pointer-events="visible" opacity="1" fill="none" stroke="none" class="guide background" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-19">
+      <rect x="20.74" y="12.61" width="118.58" height="68.77" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-20"/>
+    </g>
+    <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-21">
+      <path fill="none" d="M20.74,79.38 L 139.33 79.38" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-22"/>
+      <path fill="none" d="M20.74,63.19 L 139.33 63.19" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-23"/>
+      <path fill="none" d="M20.74,47 L 139.33 47" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-24"/>
+      <path fill="none" d="M20.74,30.8 L 139.33 30.8" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-25"/>
+      <path fill="none" d="M20.74,14.61 L 139.33 14.61" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-26"/>
+    </g>
+    <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-27">
+      <path fill="none" d="M22.74,12.61 L 22.74 81.38" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-28"/>
+      <path fill="none" d="M51.39,12.61 L 51.39 81.38" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-29"/>
+      <path fill="none" d="M80.04,12.61 L 80.04 81.38" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-30"/>
+      <path fill="none" d="M108.68,12.61 L 108.68 81.38" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-31"/>
+      <path fill="none" d="M137.33,12.61 L 137.33 81.38" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-32"/>
+    </g>
+    <g class="plotpanel" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-33">
+      <g stroke-width="0.7" fill="none" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-34">
+        <path fill="none" d="M27.06,66.86 L 31.37 66.42 35.68 66.5 38.2 66.36 43.01 65.66 47.08 60.63 55.7 59.59 65.71 60.14 74.34 62.45 84.35 63.27 95.49 64.01 102.98 63.06 108.68 62.74 119.83 62.86" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-35" class="geometry color_Forloop" stroke="#FF5EA0"/>
+        <path fill="none" d="M27.06,55.41 L 31.37 57.53 35.68 60.99 38.2 63.07 43.01 66.31 47.08 63.45 55.7 63.24 65.71 63.27 74.34 63.57 84.35 63.26 95.49 63.73 102.98 61.57 108.68 60.35 119.83 60.44" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-36" class="geometry color_BLAS" stroke="#D4CA3A"/>
+        <path fill="none" d="M27.06,63.19 L 31.37 63.19 35.68 63.19 38.2 63.19 43.01 63.19 47.08 63.19 55.7 63.19 65.71 63.19 74.34 63.19 84.35 63.19 95.49 63.19 102.98 63.19 108.68 63.19 119.83 63.19" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-37" class="geometry color_FAO" stroke="#00BFFF"/>
+        <path fill="none" d="M27.06,25.87 L 31.37 27.69 35.68 32.16 38.2 34.4 43.01 32.67 47.08 38 55.7 44.2 65.71 51.23 74.34 57.33 84.35 60.69 95.49 62.45 102.98 63.28 108.68 63.01 119.83 63.18" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-38" class="geometry color_Broadcast" stroke="#00E5B2"/>
+      </g>
+      <g class="geometry" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-39">
+        <g stroke-width="0.3" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-40">
+          <circle cx="27.06" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-41" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="31.37" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-42" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="35.68" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-43" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="38.2" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-44" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="43.01" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-45" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="47.08" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-46" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="55.7" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-47" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="65.71" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-48" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="74.34" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-49" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="84.35" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-50" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="95.49" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-51" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="102.98" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-52" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="108.68" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-53" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="119.83" cy="63.19" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-54" fill="#00BFFF" class="color_FAO" stroke="#FFFFFF"/>
+          <circle cx="27.06" cy="55.41" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-55" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="31.37" cy="57.53" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-56" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="35.68" cy="60.99" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-57" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="38.2" cy="63.07" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-58" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="43.01" cy="66.31" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-59" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="47.08" cy="63.45" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-60" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="55.7" cy="63.24" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-61" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="65.71" cy="63.27" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-62" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="74.34" cy="63.57" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-63" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="84.35" cy="63.26" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-64" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="95.49" cy="63.73" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-65" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="102.98" cy="61.57" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-66" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="108.68" cy="60.35" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-67" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="119.83" cy="60.44" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-68" fill="#D4CA3A" class="color_BLAS" stroke="#FFFFFF"/>
+          <circle cx="27.06" cy="66.86" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-69" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="31.37" cy="66.42" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-70" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="35.68" cy="66.5" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-71" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="38.2" cy="66.36" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-72" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="43.01" cy="65.66" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-73" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="47.08" cy="60.63" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-74" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="55.7" cy="59.59" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-75" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="65.71" cy="60.14" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-76" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="74.34" cy="62.45" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-77" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="84.35" cy="63.27" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-78" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="95.49" cy="64.01" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-79" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="102.98" cy="63.06" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-80" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="108.68" cy="62.74" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-81" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="119.83" cy="62.86" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-82" fill="#FF5EA0" class="color_Forloop" stroke="#FFFFFF"/>
+          <circle cx="27.06" cy="25.87" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-83" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="31.37" cy="27.69" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-84" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="35.68" cy="32.16" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-85" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="38.2" cy="34.4" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-86" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="43.01" cy="32.67" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-87" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="47.08" cy="38" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-88" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="55.7" cy="44.2" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-89" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="65.71" cy="51.23" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-90" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="74.34" cy="57.33" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-91" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="84.35" cy="60.69" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-92" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="95.49" cy="62.45" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-93" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="102.98" cy="63.28" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-94" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="108.68" cy="63.01" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-95" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+          <circle cx="119.83" cy="63.18" r="0.5" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-96" fill="#00E5B2" class="color_Broadcast" stroke="#FFFFFF"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g class="guide ylabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-97">
+    <text x="19.74" y="79.38" text-anchor="end" dy="0.35em" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-98">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83.333333%">-1</tspan></text>
+    <text x="19.74" y="63.19" text-anchor="end" dy="0.35em" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-99">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83.333333%">0</tspan></text>
+    <text x="19.74" y="47" text-anchor="end" dy="0.35em" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-100">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83.333333%">1</tspan></text>
+    <text x="19.74" y="30.8" text-anchor="end" dy="0.35em" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-101">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83.333333%">2</tspan></text>
+    <text x="19.74" y="14.61" text-anchor="end" dy="0.35em" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-102">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83.333333%">3</tspan></text>
+  </g>
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="none" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-103">
+    <text x="8.81" y="45" text-anchor="middle" dy="0.35em" transform="rotate(-90, 8.81, 47)" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-104">Rel. [s / G ops.] to FAO</text>
+  </g>
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="none" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-105">
+    <text x="80.04" y="10.61" text-anchor="middle" id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-106">x = y + a*z (i=1, inc=1)</text>
+  </g>
+</g>
+<defs>
+<clipPath id="fig-58a828358ad14b7d8a0ab3878bd1ab7d-element-18">
+  <path d="M20.74,12.61 L 139.33 12.61 139.33 81.38 20.74 81.38" />
+</clipPath
+></defs>
+</svg>
