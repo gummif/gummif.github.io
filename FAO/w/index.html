@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+.centered-container {
+	float:left;
+	position:relative;
+	left:50%;
+}
+.centered {
+	float:left;
+	position:relative;
+	left:-50%;
+}
+</style>
+</head>
+<body>
+
+<script>
+function myFunction() {
+    //var img = document.createElement("img");
+    //img.src = document.getElementById("field1").value;
+    var node = document.getElementById("rass");
+    while (node.firstChild) {
+    node.removeChild(node.firstChild);
+	}
+	var value = document.getElementById("sel").value;
+	var text = value == "GFA" ? "Ekki faggi" : "Faggi";
+	node.appendChild(document.createTextNode(text))
+    //node.appendChild(img);
+}
+</script>
+
+<div class="centered-container">
+<div class="centered">
+<h3>DÝRLARA APPIÐ</h3>
+<select id="sel">
+	<option value="AFL">AFL</option>
+	<option value="BEB">BEB</option>
+	<option value="DMB">DMB</option>
+	<option value="GFA">GFA</option>
+	<option value="JHJ">JHJ</option>
+	<option value="RSC">RSC</option>
+	<option value="ST">ST</option>
+</select> 
+
+<button onclick="myFunction()">Velja</button>
+
+<p id="rass"></p>
+</div>
+</div>
+
+</body>
+</html>
