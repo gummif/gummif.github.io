@@ -83,8 +83,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Gudmundur F. Adalsteinsson – 2019-03-08</p>
 <h1 id="code-generation-with-c-contracts">Code Generation with C++ Contracts</h1>
 <p><em>Caveat: Note that contracts has not been standardized yet and this post will likely need to be updated when C++20 lands.</em></p>
-<p><a href="https://en.cppreference.com/w/cpp/language/attributes/contract">Contracts</a> (runtime pre/post-conditions and assertions) have been approved for C++20. There is a branch of gcc that has implemented parts of the specs (see <a href="https://gitlab.com/lock3/gcc-new/wikis/contract-assertions">this</a> for more details on the semantics and flags). With the power of <a href="https://godbolt.org/">Compiler Explorer</a> I have put together various cases using the <code>[[assert]]</code> attribute (pre/post-condition seem not to have been implemented yet it seems) and other traditional forms of checking and analyze the generated assembly.</p>
-<p>The following contrived functions contain a branch when <code>x</code> is negative, and different ways verify that the input is non-negative. A smart compiler should optimized away the branch when checked (with noreturn semantics). They were compiled with <code>gcc -std=c++2a -O3</code>.</p>
+<p><a href="https://en.cppreference.com/w/cpp/language/attributes/contract">Contracts</a> (runtime pre/post-conditions and assertions) have been approved for C++20. There is a branch of gcc that has implemented parts of the specs (see <a href="https://gitlab.com/lock3/gcc-new/wikis/contract-assertions">this</a> for more details on the semantics and flags). With the power of <a href="https://godbolt.org/">Compiler Explorer</a> I have put together various cases using the <code>[[assert]]</code> attribute (pre/post-condition seem not to have been implemented yet it seems) and other traditional forms of checking, and analyzed the generated assembly.</p>
+<p>The following contrived functions contain a branch when <code>x</code> is negative, and different ways verify that the input is non-negative. A smart compiler should optimize away the branch when checked (with noreturn semantics). The code was compiled with <code>gcc -std=c++2a -O3</code>.</p>
 <h4 id="reference">Reference</h4>
 <div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><a class="sourceLine" id="cb1-1" title="1"><span class="dt">int</span> f1(<span class="dt">int</span> x)</a>
 <a class="sourceLine" id="cb1-2" title="2">{</a>
@@ -294,13 +294,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb18-42" title="42">  <span class="kw">mov</span> rdi, rbx</a>
 <a class="sourceLine" id="cb18-43" title="43">  <span class="kw">call</span> _Unwind_Resume</a></code></pre></div>
 <h2 id="summary-of-results">Summary of results</h2>
-<p>Summary, where default is unchecked and not optimzed:</p>
+<p>The results are summarized in the table below, where the default is unchecked and not optimized. Optimized means that the compiler has removed the branched, based a previous check or assumption:</p>
 <table>
 <thead>
 <tr class="header">
 <th>Case</th>
 <th>Checked</th>
 <th>Optimized</th>
+<th style="text-align: center;">Lines of assembly</th>
 </tr>
 </thead>
 <tbody>
@@ -308,57 +309,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td>Reference</td>
 <td></td>
 <td></td>
+<td style="text-align: center;">6</td>
 </tr>
 <tr class="even">
 <td>C-style assert</td>
 <td>checked</td>
 <td>optimized</td>
+<td style="text-align: center;">18</td>
 </tr>
 <tr class="odd">
 <td>C-style assert with <code>-DNDEBUG</code></td>
 <td></td>
 <td></td>
+<td style="text-align: center;">6</td>
 </tr>
 <tr class="even">
 <td>Explicit <code>std::terminate()</code></td>
 <td>checked</td>
 <td>optimized</td>
+<td style="text-align: center;">8</td>
 </tr>
 <tr class="odd">
 <td><code>[[assert]]</code></td>
 <td>checked</td>
 <td></td>
+<td style="text-align: center;">43</td>
 </tr>
 <tr class="even">
 <td><code>[[assert audit]]</code></td>
 <td></td>
 <td></td>
+<td style="text-align: center;">6</td>
 </tr>
 <tr class="odd">
 <td><code>[[assert axiom]]</code></td>
 <td></td>
 <td>optimized</td>
+<td style="text-align: center;">3</td>
 </tr>
 <tr class="even">
 <td><code>[[assert]]</code> with <code>default:assume</code></td>
 <td></td>
 <td>optimized</td>
+<td style="text-align: center;">3</td>
 </tr>
 <tr class="odd">
 <td><code>[[assert check_never_continue]]</code> with <code>default:assume</code></td>
 <td>checked</td>
 <td></td>
+<td style="text-align: center;">43</td>
 </tr>
 </tbody>
 </table>
-<p>What is surprising is that the <code>[[assert]]</code> contract does not produce optimized code even though the default semantics is <code>check_never_continue</code> (see <a href="https://gitlab.com/lock3/gcc-new/wikis/contract-assertions">the wiki</a> for more details). I assume this is a feature they are working on and that code in the future will get optimized after a check with the <code>check_never_continue</code> semtanics.</p>
+<p>What is surprising is that the <code>[[assert]]</code> contract does not produce optimized code even though the default semantics is <code>check_never_continue</code> (see <a href="https://gitlab.com/lock3/gcc-new/wikis/contract-assertions">the wiki</a> for more details). I assume this is a feature they are working on and that in the future the contract violation handler will have noreturn semantics when <code>check_never_continue</code> semantics are enabled.</p>
 <p>Currently there is no standard way to get the unchecked optimized code without resorting to compiler specific intrinsics. But contracts with the <code>assume</code> semantics are a very sharp knife. A program compiled with <code>-fcontract-semantic=default:assume</code> can be more heavily optimized, but any contract violations will result in (<em>really</em>) undefined behaviour.</p>
 <p>The results can be summarized in form of a few guidelines for where, when and how to use contracts:</p>
 <ul>
 <li>Contracts are a good replacement for the <code>assert</code> macro and compiler intrinsics</li>
 <li>Do not sprinkle contracts on functions without a careful thought</li>
-<li>For each contract considered whether assuming it to be true is acceptable, and consider using <code>check_never_continue</code> when assuming or ignoring a contract is not acceptable</li>
+<li>For each contract, consider whether the <code>assume</code> semantics are acceptable, and consider using <code>check_never_continue</code> when assuming or ignoring a contract is not acceptable</li>
 <li>Do not rely on contracts to verify user input</li>
 </ul>
+<p>And finally, have fun!</p>
 </body>
 </html>

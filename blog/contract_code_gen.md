@@ -4,9 +4,9 @@ Gudmundur F. Adalsteinsson -- 2019-03-08
 
 *Caveat: Note that contracts has not been standardized yet and this post will likely need to be updated when C++20 lands.*
 
-[Contracts](https://en.cppreference.com/w/cpp/language/attributes/contract) (runtime pre/post-conditions and assertions) have been approved for C++20. There is a branch of gcc that has implemented parts of the specs (see [this](https://gitlab.com/lock3/gcc-new/wikis/contract-assertions) for more details on the semantics and flags).  With the power of [Compiler Explorer](https://godbolt.org/) I have put together various cases using the `[[assert]]` attribute (pre/post-condition seem not to have been implemented yet it seems) and other traditional forms of checking and analyze the generated assembly. 
+[Contracts](https://en.cppreference.com/w/cpp/language/attributes/contract) (runtime pre/post-conditions and assertions) have been approved for C++20. There is a branch of gcc that has implemented parts of the specs (see [this](https://gitlab.com/lock3/gcc-new/wikis/contract-assertions) for more details on the semantics and flags).  With the power of [Compiler Explorer](https://godbolt.org/) I have put together various cases using the `[[assert]]` attribute (pre/post-condition seem not to have been implemented yet it seems) and other traditional forms of checking, and analyzed the generated assembly. 
 
-The following contrived functions contain a branch when `x` is negative, and different ways verify that the input is non-negative. A smart compiler should optimized away the branch when checked (with noreturn semantics). They were compiled with `gcc -std=c++2a -O3`.
+The following contrived functions contain a branch when `x` is negative, and different ways verify that the input is non-negative. A smart compiler should optimize away the branch when checked (with noreturn semantics). The code was compiled with `gcc -std=c++2a -O3`.
 
 #### Reference 
 ```c++
@@ -263,21 +263,21 @@ f9(int) [clone .cold]:
 
 ## Summary of results
 
-Summary, where default is unchecked and not optimzed:
+The results are summarized in the table below, where the default is unchecked and not optimized. Optimized means that the compiler has removed the branched, based a previous check or assumption:
 
-| Case      | Checked | Optimized |
-|-----------|---------|-----------|
-| Reference |  |  |
-| C-style assert        | checked | optimized |
-| C-style assert with `-DNDEBUG` |   |  |
-| Explicit `std::terminate()` | checked | optimized |
-| `[[assert]]` | checked |  |
-| `[[assert audit]]` |   |  |
-| `[[assert axiom]]` |  | optimized |
-| `[[assert]]` with `default:assume` | | optimized |
-| `[[assert check_never_continue]]` with `default:assume` | checked |  |
+| Case      | Checked | Optimized | Lines of assembly |
+|-----------|---------|-----------|:---------------:|
+| Reference |  |  | 6 |
+| C-style assert        | checked | optimized | 18 |
+| C-style assert with `-DNDEBUG` |   |  | 6 |
+| Explicit `std::terminate()` | checked | optimized | 8 |
+| `[[assert]]` | checked |  | 43 |
+| `[[assert audit]]` |   |  | 6 |
+| `[[assert axiom]]` |  | optimized | 3 |
+| `[[assert]]` with `default:assume` | | optimized | 3 |
+| `[[assert check_never_continue]]` with `default:assume` | checked |  | 43 |
 
-What is surprising is that the `[[assert]]` contract does not produce optimized code even though the default semantics is `check_never_continue` (see [the wiki](https://gitlab.com/lock3/gcc-new/wikis/contract-assertions) for more details). I assume this is a feature they are working on and that code in the future will get optimized after a check with the `check_never_continue` semtanics.
+What is surprising is that the `[[assert]]` contract does not produce optimized code even though the default semantics is `check_never_continue` (see [the wiki](https://gitlab.com/lock3/gcc-new/wikis/contract-assertions) for more details). I assume this is a feature they are working on and that in the future the contract violation handler will have noreturn semantics when `check_never_continue` semantics are enabled.
 
 Currently there is no standard way to get the unchecked optimized code without resorting to compiler specific intrinsics. But contracts with the `assume` semantics are a very sharp knife. A program compiled with `-fcontract-semantic=default:assume` can be more heavily optimized, but any contract violations will result in (*really*) undefined behaviour.
 
@@ -285,10 +285,10 @@ The results can be summarized in form of a few guidelines for where, when and ho
 
 - Contracts are a good replacement for the `assert` macro and compiler intrinsics
 - Do not sprinkle contracts on functions without a careful thought
-- For each contract considered whether assuming it to be true is acceptable, and consider using `check_never_continue` when assuming or ignoring a contract is not acceptable
+- For each contract, consider whether the `assume` semantics are acceptable, and consider using `check_never_continue` when assuming or ignoring a contract is not acceptable
 - Do not rely on contracts to verify user input
 
-
+And finally, have fun!
 
 
 
