@@ -80,7 +80,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <![endif]-->
 </head>
 <body>
-<p><a href="https://github.com/gummif">Gudmundur F. Adalsteinsson</a> – 2019-03-08 – <a href="http://gummif.github.io/blog">Home</a></p>
+<p><a href="https://github.com/gummif">Gudmundur F. Adalsteinsson</a> – 2019-03-08 – <a href="http://gummif.github.io/blog">Overview</a></p>
 <h1 id="code-generation-with-c-contracts">Code Generation with C++ Contracts</h1>
 <p><em>Caveat: Note that contracts has not been standardized yet and this post will likely need to be updated when C++20 lands.</em></p>
 <p><a href="https://en.cppreference.com/w/cpp/language/attributes/contract">Contracts</a> (runtime pre/post-conditions and assertions) have been approved for C++20. There is a branch of gcc that has implemented parts of the specs (see <a href="https://gitlab.com/lock3/gcc-new/wikis/contract-assertions">this</a> for more details on the semantics and flags). With the power of <a href="https://godbolt.org/">Compiler Explorer</a> I have put together various cases using the <code>[[assert]]</code> attribute (pre/post-condition seem not to have been implemented yet it seems) and other traditional forms of checking, and analyzed the generated assembly.</p>
