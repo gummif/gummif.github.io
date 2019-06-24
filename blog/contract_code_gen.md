@@ -1,4 +1,4 @@
-[Gudmundur F. Adalsteinsson](https://github.com/gummif) -- 2019-03-08 -- [Overview](http://gummif.github.io/blog)
+[Gudmundur F. Adalsteinsson](https://github.com/gummif) -- 2019-03-08 -- [Blog index](http://gummif.github.io/blog)
 
 # Code Generation with C++ Contracts
 
